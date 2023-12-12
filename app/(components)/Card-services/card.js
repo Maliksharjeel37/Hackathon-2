@@ -14,7 +14,10 @@ export default function card(props) {
             ad, non reiciendis sit natus,
             sint commodi illo eligendi et repellendus 
             fuga!</p>
-            <button className=" hover:text-white text-lg">Read More{"->"}</button>
+
+      </div>
+      <div className=" mb-10">
+      <a  href="./../../DetailsServices" style={{backgroundColor:'blue',padding:'15px', borderRadius:"50px", color:'white', fontSize:'15px',}} >Read More {"->"} </a>
       </div>
     </div>
   );

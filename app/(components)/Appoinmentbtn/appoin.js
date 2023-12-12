@@ -1,9 +1,12 @@
 "use client"
 import React, { useState } from 'react';
+import { collection, addDoc } from "firebase/firestore";
 
+import {db} from "./../../../config/firebasedb"
 const AppointmentModal = ({ closeModal }) => {
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
+  const [medicalhistory, setMedicalhistory] = useState('');
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -12,13 +15,29 @@ const AppointmentModal = ({ closeModal }) => {
   const handleContactChange = (e) => {
     setContact(e.target.value);
   };
-
-  const handleSave = () => {
-    // Add your logic to save name and contact
-    console.log('Name:', name);
-    console.log('Contact:', contact);
-    closeModal(); // Close the modal after saving
+  const handleMedicalhistoryChange = (e) => {
+    setMedicalhistory(e.target.value);
   };
+
+  const handleSave = async () => {
+    
+    let appointment = {
+      name: name,
+      contact: contact, 
+      medicalhistory: medicalhistory 
+    };
+    console.log(appointment)
+    try {
+      const collectionName = collection(db,"appoinments")
+    
+      await addDoc(collectionName, appointment )
+      console.log("Document written with ID: ");
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
+  
+
 
   return (
     <div className="modal-container" >
@@ -27,22 +46,22 @@ const AppointmentModal = ({ closeModal }) => {
 
         <label style={{}}>
           Name:
-          <input style={{color:"black"}} type="text" placeholder='Enter your Name' value={name} onChange={handleNameChange} />
+          <input style={{color:"black"}} type="text" placeholder='Enter your Name'  onChange={handleNameChange} />
         </label>
 
         <label>
           Contact:
-          <input style={{color:"black"}} type="text" placeholder='Enter your contact' value={contact} onChange={handleContactChange} />
+          <input style={{color:"black"}} type="text" placeholder='Enter your contact'  onChange={handleContactChange} />
         </label>
 
         <label>
           Medical History:
-          <input style={{color:"black"}} type="text" placeholder='Enter your Medical history' value={contact} onChange={handleContactChange} />
+          <input style={{color:"black"}} type="text" placeholder='Enter your Medical history' onChange={handleMedicalhistoryChange} />
         </label>
 
 
         <div className="button-container">
-          <button className="save-button" onClick={handleSave}>
+          <button className="save-button" onClick={handleSave} >
             Save
           </button>
           <button className="cancel-button" onClick={closeModal}>
@@ -51,7 +70,7 @@ const AppointmentModal = ({ closeModal }) => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style >{`
         .modal-container {
           position: fixed;
           top: 0;
@@ -144,7 +163,7 @@ export default function AppointmentBtn() {
         </div>
       )}
 
-      <style jsx>{`
+      <style>{`
         .appointment-button {
           background-color: #3498db;
           color: white;

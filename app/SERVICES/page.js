@@ -1,12 +1,13 @@
 import Card from "./../(components)/Card-services/card";
-
+import Header from "./../(components)/Header/header"
 export default function SERVICES() {
   return (
     <>
       <div className="main-div">
+      <Header heading ="our services"/>
       <div className="section-1 flex  mt-32 ">
         <div>
-          <h1 className=" text-black text-5xl" style={{padding:'110px', marginLeft:"200px"}}>
+          <h1 className=" text-black text-7xl text-center p-10" >
             We Are Providing Madical services
           </h1>
         </div>

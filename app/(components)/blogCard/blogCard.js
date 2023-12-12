@@ -4,6 +4,7 @@ import { CgCalendarDates } from "react-icons/cg";
 import { FaCommentDots } from "react-icons/fa";
 import { PiHeartStraightFill } from "react-icons/pi";
 import { FaShareAlt } from "react-icons/fa";
+// import kugjy from ""
 export default function card(props) {
   return (
     <div  className="card bg-white mx-5 border-4 text-center border-white mt-2 mb-32 hover:bg-emerald-300 hover:scale-95 shadow-2xl">
@@ -35,7 +36,10 @@ export default function card(props) {
             
       </div>
       <div className="flex">
-      <button className=" hover:text-white text-lg ml-3">Read More{"->"}</button>
+      <div className=" p-5">
+      <a  href="./../../BLOGDETAILS" style={{backgroundColor:'blue',padding:'12px', borderRadius:"50px", color:'white', fontSize:'15px',}} >Read More {"->"} </a>
+
+      </div>
       <div className=" flex ml-32">
       <FaCommentDots />
       <h1 className=" ml-2">5</h1>
