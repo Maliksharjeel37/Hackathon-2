@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    outline: none;
+    text-align: start;
+  
+    &:focus {
+      border-color: #00bcd4;
+    }
+}
+.Textarea{
+    width: 60%;
+    padding: 30px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    resize: vertical; 
+    min-height: 100px; 
+    margin-left: 180px; 
+    text-align: start;
+  
+    &:focus {
+      border-color: #00bcd4;
+    }
+}

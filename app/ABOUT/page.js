@@ -1,9 +1,14 @@
 // import Image from 'next/image'
 import AppointmentBtn from "../(components)/Appoinmentbtn/appoin";
+import Header from "./../(components)/Header/header";
 export default function About() {
   return (
     <>
       <section class="text-gray-600 body-font">
+        <Header heading="About Us" />
+        <h1 className=" text-black text-7xl text-center p-10" >
+            About Us
+          </h1>
         <div class="container mx-auto flex px-5 pb-24 pt-12 md:flex-row flex-col items-center">
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <img
@@ -31,14 +36,11 @@ export default function About() {
               park mlkshk tote bag selvage.
             </p>
             <div class="flex justify-center">
-              <AppointmentBtn/>
+              <AppointmentBtn />
             </div>
           </div>
         </div>
       </section>
-
- 
-
     </>
   );
 }
