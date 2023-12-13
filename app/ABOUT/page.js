@@ -1,5 +1,5 @@
 // import Image from 'next/image'
-import Button from "./../(components)/button"
+import AppointmentBtn from "../(components)/Appoinmentbtn/appoin";
 export default function About() {
   return (
     <>
@@ -11,11 +11,10 @@ export default function About() {
               alt="hero"
               width={500}
               height={500}
-              src="/images/service-1.png"
+              src="/images/service-4.png"
             />
           </div>
           <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-           
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
               We Are here for easy medication
               <br class="hidden lg:inline-block" />
@@ -32,7 +31,7 @@ export default function About() {
               park mlkshk tote bag selvage.
             </p>
             <div class="flex justify-center">
-             <Button text={"Lear More"}/>
+              <AppointmentBtn/>
             </div>
           </div>
         </div>
@@ -42,4 +41,4 @@ export default function About() {
 
     </>
   );
-  }
+}

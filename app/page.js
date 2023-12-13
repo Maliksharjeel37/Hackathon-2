@@ -1,5 +1,5 @@
 import Header from "./(components)/Header/header"
-import About from "./ABOUT/about"
+import About from "./ABOUT/page"
 import Card from "./(components)/Card-services/card"
 import Blogcard from "./(components)/blogCard/blogCard"
 // import PORTFOLIO from "./PORTFOLIO/page";

@@ -7,7 +7,7 @@ import { FaShareAlt } from "react-icons/fa";
 // import kugjy from ""
 export default function card(props) {
   return (
-    <div  className="card bg-white mx-5 border-4 text-center border-white mt-2 mb-32 hover:bg-emerald-300 hover:scale-95 shadow-2xl">
+    <div  className="card bg-white mx-5 border-4 text-center border-white mt-2 mb-32  hover:scale-95 shadow-2xl">
 <div className=' border-solid rounded-full'>
 <div>
 <Image src={props.imgsrc}  width={550} height={500}  />
