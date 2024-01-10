@@ -217,7 +217,7 @@ Dramatically syndicate alternative infrastructures through backward-compatible w
     </div>
     {/* blogDetails page end */}
     {/* Contect page start */}
-<div>
+{/* <div>
 <h1 className=" text-black text-7xl text-center p-10" >
            Contect Us 
           </h1>
@@ -266,7 +266,7 @@ Dramatically syndicate alternative infrastructures through backward-compatible w
     
      
     </div>
-</div>
+</div> */}
 {/* contect page end */}
      
     </div>
